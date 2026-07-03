@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import * as Icons from 'lucide-react';
-import { 
-  ArrowLeft, CheckCircle2, ShieldCheck, 
-  Zap, Star, Award, TrendingUp, Sparkles, 
+import {
+  ArrowLeft, CheckCircle2, ShieldCheck,
+  Zap, Star, Award, TrendingUp, Sparkles,
   HelpCircle, ChevronRight, Activity, Globe
 } from 'lucide-react';
 import { Header } from '@/components/Header';
@@ -102,15 +102,15 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               <div className={cn('inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/[0.08] shadow-inner', accent.bgSoft)}>
                 {Icon && <Icon className={cn('h-6 w-6', accent.text)} strokeWidth={1.8} />}
               </div>
-              
+
               <span className="block text-xs font-bold uppercase tracking-widest text-cyan-400 sm:text-sm">
                 Enterprise Grade Solutions
               </span>
-              
+
               <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:leading-[1.15]">
                 {service.name}
               </h1>
-              
+
               <p className="text-base font-light leading-relaxed text-slate-300 sm:text-lg md:text-xl">
                 {service.longDescription || service.shortDescription}
               </p>
@@ -129,7 +129,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
             {/* Premium Dynamic Illustration Frame */}
             <div className="relative h-64 w-full overflow-hidden rounded-2xl border border-white/[0.06] bg-brand-900/40 shadow-2xl transition-all duration-500 hover:border-white/[0.15] sm:h-80 md:h-96 lg:col-span-5">
-              <Image 
+              <Image
                 src={activeImages.hero}
                 alt={`${service.name} Architectural Overview`}
                 fill
@@ -138,7 +138,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 sizes="(max-w-1024px) 100vw, 40vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/10 to-transparent" />
-              
+
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl border border-white/[0.08] bg-brand-950/80 p-4 backdrop-blur-md">
                 <div className="flex items-center gap-3">
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-500/20 text-cyan-400">
@@ -200,7 +200,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
               {/* Dynamic Contextual Case Study Graphic */}
               <div className="relative my-6 h-36 w-full overflow-hidden rounded-xl border border-white/[0.04]">
-                <Image 
+                <Image
                   src={activeImages.side}
                   alt="Telemetry data visualization metric suite"
                   fill
@@ -227,7 +227,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-12">
-            
+
             <div className="lg:col-span-2 space-y-12">
               <div>
                 <h2 className="mb-2 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
@@ -239,8 +239,8 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
                 <div className="space-y-4">
                   {service.process.map((step, i) => (
-                    <div 
-                      key={step.title} 
+                    <div
+                      key={step.title}
                       className="group flex gap-4 rounded-xl border border-white/[0.04] bg-brand-900/20 p-5 transition-all duration-300 hover:border-white/[0.1] hover:bg-brand-900/40"
                     >
                       <span
@@ -270,7 +270,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                   <HelpCircle className="h-5 w-5 text-cyan-400" />
                   <h3 className="font-display text-xl font-bold text-white">Frequently Addressed Parameters</h3>
                 </div>
-                
+
                 <div className="space-y-3">
                   {[
                     { q: "What security frameworks govern this project environment?", a: "Every layer is protected via TLS 1.3, continuous static code analysis (SAST), and runtime container validation protocols tailored specifically to client network architecture rules." },
@@ -292,7 +292,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                   <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">
                     Integrated Deliverables
                   </h3>
-                  
+
                   <ul className="mb-8 space-y-4">
                     {service.deliverables.map((d) => (
                       <li key={d} className="flex items-start gap-3 text-xs text-slate-300 sm:text-sm">
@@ -320,7 +320,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                     {[...Array(5)].map((_, i) => <Star key={i} className="h-3 w-3 fill-current" />)}
                   </div>
                   <p className="text-xs font-light italic leading-relaxed text-slate-400">
-                    "The strategic validation matrices deployed during development transformed our product velocity entirely. Absolute masterclass in execution."
+                    &ldquo;The strategic validation matrices deployed during development transformed our product velocity entirely. Absolute masterclass in execution.&rdquo;
                   </p>
                   <p className="mt-2 text-[10px] font-bold uppercase tracking-widest text-white">— VP Engineering, NexaCorp</p>
                 </div>
